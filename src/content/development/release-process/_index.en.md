@@ -100,10 +100,10 @@ To do so, run the `make` command with `dryrun=true`.
 {{% /notice %}}
 
 The command runs, gathers the data for the release, updates the release YAML and pushes it for review. Once the review process is done,
-and the automated release steps on the CI have finished successfully, the PR is merged. Pull requests will be created for all dependent
-projects to update them to the new version in preparation for the subsequent  steps. The automation will leave a comment with a list of
-them. Make sure all those PRs are merged and their release jobs pass. Then proceed with the next step, by simply **running the same
-command again to advance to the next stage**.
+and the automated release steps on the CI have finished successfully, merge the PR. Pull requests will then be created for all dependent
+projects to update them to the new version pertaining to the current step, if necessary, in preparation for the next step. The automation
+will also leave a comment with a list of the dependent project PRs in the release PR . Make sure all those PRs are merged and their
+release jobs pass then proceed to the next step, by simply **running the same command again to advance to the next stage**.
 
 Once there isn't anything else to do, the command will inform you. At this point, continue manually with any steps not automated yet,
 starting with [Verify Release](#verify).
