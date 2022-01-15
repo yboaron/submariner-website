@@ -30,6 +30,7 @@ Backporting a pull request (PR) is automated by running:
 
 `make LOCAL_BUILD=1 backport release=<release-branch> pr=<PR to cherry-pick>`
 
+Please ensure that [shipyard](https://github.com/submariner-io/shipyard) repo is checked out alongside the project.
 The `make` target runs a script,
 [backport.sh](https://github.com/submariner-io/shipyard/blob/devel/scripts/shared/backport.sh), originally developed by the [Kubernetes community](https://github.com/kubernetes/kubernetes/blob/master/hack/cherry_pick_pull.sh).
 
