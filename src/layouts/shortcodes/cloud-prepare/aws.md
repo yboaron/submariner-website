@@ -18,11 +18,11 @@ subctl cloud prepare aws --ocp-metadata path/to/{{ $cluster }}/metadata.json {{ 
 
 {{- end }}
 
-Note that certain parameters, such as the tunnel UDP port and AWS instance type for the gateway,
+Note that certain parameters, such as the tunnel UDP port, AWS instance type for the gateway and AWS profile,
 can be customized. For example:
 
 ```bash
-subctl cloud prepare aws --ocp-metadata path/to/metadata.json --natt-port 4501 --gateway-instance m4.xlarge
+subctl cloud prepare aws --profile profile-name --ocp-metadata path/to/metadata.json --natt-port 4501 --gateway-instance m4.xlarge
 ```
 
 Submariner can be deployed in HA mode by setting the `gateways` flag:
